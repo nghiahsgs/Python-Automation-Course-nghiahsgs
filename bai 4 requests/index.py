@@ -1,5 +1,14 @@
 #ref https://realpython.com/python-requests/
 import requests
+import io
+#luu file
+def writeHTMLfile(data):
+	file=io.open('code.html','w',encoding='utf-8')
+	file.write(res.text)
+	file.close()
+	
+res=requests.get('https://www.youtube.com/results?search_query=nghiahsgs')
+writeHTMLfile(res.text)
 
 #demo 1 => get requests
 '''
