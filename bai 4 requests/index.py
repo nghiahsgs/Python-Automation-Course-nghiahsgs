@@ -4,7 +4,7 @@ import io
 #luu file
 def writeHTMLfile(data):
 	file=io.open('code.html','w',encoding='utf-8')
-	file.write(res.text)
+	file.write(data)
 	file.close()
 	
 res=requests.get('https://www.youtube.com/results?search_query=nghiahsgs')
