@@ -50,19 +50,20 @@ list_threads=[]
 
 thread_time=myThread_time('thread_time')
 
+nb_threads=8
 #init
-for i in range(5):
+for i in range(nb_threads):
     new_thread=myThread_request('thread%s'%i)
     list_threads.append(new_thread)
 
 #start
 thread_time.start()
-for i in range(5):
+for i in range(nb_threads):
     list_threads[i].start()
 
 #join
 thread_time.join()
-for i in range(5):
+for i in range(nb_threads):
     list_threads[i].join()
 
 print('is_stop',is_stop)
